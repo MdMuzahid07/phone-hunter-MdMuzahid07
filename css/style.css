@@ -3,8 +3,8 @@
 
 
 * {
-    font-family: roboto;
-    transition: all 0.3 linear;
+    font-family: ubuntu;
+    transition: all 0.2s linear;
 }
 
 html::-webkit-scrollbar {

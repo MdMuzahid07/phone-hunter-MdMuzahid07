@@ -4,19 +4,21 @@
 
 * {
     font-family: ubuntu;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
 }
 
-html::-webkit-scrollbar {
-    width: 0.5rem;
+
+/* scroll bar customization for div */
+.scroll::-webkit-scrollbar {
+    width: 0.1rem;
 }
 
-html::-webkit-scrollbar-thumb  {
-    background-color: rgb(165, 165, 165);
+.scroll::-webkit-scrollbar-thumb  {
+    background-color: rgb(255, 81, 0);
 }
 
-html::-webkit-scrollbar-track {
-    background-color: rgb(237, 237, 237);
+.scroll::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255)
 }
 
 .input-field {
@@ -50,13 +52,32 @@ html::-webkit-scrollbar-track {
     box-shadow: 0px 0px 5px 0px black;
 }
 
-.div {
+.card-shadow {
     box-shadow: 0px 0px 5px 0px black;
-    margin: 0.3rem;
     border-radius: 0.5rem;
-    width: 15rem;
 }
 
 .div:hover {
     box-shadow: 0px 0px 20px 0px black;
+}
+
+.scrollable-box {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* css media screen to responsive design */
+
+@media screen and (max-width: 850px){
+    .scrollable-box {
+        height: auto;
+        overflow-x: initial;
+        overflow-y: initial;
+        scroll-behavior: smooth;
+    }
 }

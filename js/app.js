@@ -27,10 +27,10 @@ const displayData = (phones) => {
     phones.forEach((phone) => {
         console.log(phone)
         const div = document.createElement("div");
-        div.classList.add('div');
+        // div.classList.add('div');
         div.innerHTML = ` 
             <div class="col">
-                <div class="card p-3 rounded-3 border-0 h-75">
+                <div class="card p-3 rounded-3 border-0 h-100 w-100 card-shadow">
                     <img src="${phone.image}" class="card-img-top" alt="phone image">
                     <div class="card-body">
                         <h5 class="card-title">Brand: ${phone.brand}</h5>
@@ -67,22 +67,24 @@ const phoneFullDetails = (phoneFeatures) => {
 
 
     const div = document.createElement('div');
+    // div.classList.add('div');
     div.innerHTML = `
         <div class="col">
-            <div class="card p-3 rounded-3 border-0 h-100 w-100">
+            <div class="card p-3 rounded-3 border-0 h-100 w-100 card-shadow">
                 <img src="${phoneFeatures.image}" class="card-img-top" alt="phone image">
                 <div class="card-body">
-                    <h5 class="card-title">Brand: ${phoneFeatures.mainFeatures.brand}</h5>
+                    <h5 class="card-title">Brand: ${phoneFeatures.brand}</h5>
+                    <h5 class="card-title">releaseDate: ${phoneFeatures.releaseDate}</h5>
                     <h3>mainFeatures:</h3>
-                    <p class="card-text">Model: ${phoneFeatures.mainFeatures.chipSet}</p>
-                    <p class="card-text">Model: ${phoneFeatures.mainFeatures.displaySize}</p>
-                    <p class="card-text">Model: ${phoneFeatures.mainFeatures.memory}</p>
+                    <p class="card-text">chipSet: ${phoneFeatures.mainFeatures.chipSet}</p>
+                    <p class="card-text">displaySize: ${phoneFeatures.mainFeatures.displaySize}</p>
+                    <p class="card-text">Model: ${phoneFeatures.mainFeatures.name}</p>
+                    <p class="card-text">memory: ${phoneFeatures.mainFeatures.memory}</p>
                     <h3>sensors:</h3>
-                    <p class="card-text">Model: ${phoneFeatures.mainFeatures.sensors}</p>
-                   
+                    <p class="card-text">sensors: ${phoneFeatures.mainFeatures.sensors}</p>
+                    <p class="card-text">storage: ${phoneFeatures.mainFeatures.storage}</p>
 
                 </div>
-        
             </div>
         </div> 
     `;

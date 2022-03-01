@@ -33,21 +33,24 @@
     <main>
         <section class="container my-5">
             <div class="row">
-                <div class="col-md-6  p-4 rounded-3 boxshadow">
-                    <div class="input-group mb-3 w-md-50">
-                        <input class="input-field" type="text" placeholder="Search Phone">
-                        <button class="search">Search<i class="fa-solid fa-magnifying-glass ms-1"></i></button>
-                      </div>
-                      <div class="brands d-flex">
-                          <h5 class="textOrangeRed fw-bold">Apple iphone</h5>
-                          <h5 class="textOrangeRed fw-bold ms-3">Apple iphone</h5>
-                          <h5 class="textOrangeRed fw-bold ms-3">Apple iphone</h5>
-                      </div>
+                <div class="col-md-4 ">
+                    <div class="boxshadow  p-4 rounded-3">
+                        <div class="input-group mb-3 w-md-50">
+                            <input id="search-filed" class="input-field" type="text" placeholder="Search Phone">
+                            <button onclick="loadData()" class="search">Search<i class="fa-solid fa-magnifying-glass ms-1"></i></button>
+                          </div>
+                          <div class="brands d-flex">
+                            <h5 class="textOrangeRed fw-bold"><i class="fa-solid fa-mobile-screen-button me-1 text-orangeRed"></i>Apple iphone</h5>
+                            <h5 class="textOrangeRed fw-bold ms-3"><i class="fa-solid fa-mobile-screen-button me-1 text-orangeRed"></i>Apple iphone</h5>
+                            <h5 class="textOrangeRed fw-bold ms-3"><i class="fa-solid fa-mobile-screen-button me-1 text-orangeRed"></i>Apple iphone</h5>
+                        </div>
+                    </div>       
                 </div>
-                <div class="col-md-6 rounded-3 p-3 d-flex">
-                    <h3>right site</h3>
+                <div class="col-md-8 rounded-3 p-3 d-flex">
+                    <div id="search-results" class="row row-cols-1 row-cols-md-3 g-4 my-sm-5 my-md-0">
+                       <!-- container for search results -->
+                    </div>
                 </div>
-            </div>
         </section>
     </main>
     <footer>

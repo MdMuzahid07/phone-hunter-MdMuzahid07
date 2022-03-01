@@ -4,6 +4,7 @@
 
 * {
     font-family: roboto;
+    transition: all 0.3 linear;
 }
 
 html::-webkit-scrollbar {
@@ -41,6 +42,21 @@ html::-webkit-scrollbar-track {
     background-color: rgb(255, 60, 0);
 }
 
+.text-orangeRed {
+    color: rgb(255, 60, 0);
+}
+
 .boxshadow {
     box-shadow: 0px 0px 5px 0px black;
+}
+
+.div {
+    box-shadow: 0px 0px 5px 0px black;
+    margin: 0.3rem;
+    border-radius: 0.5rem;
+    width: 15rem;
+}
+
+.div:hover {
+    box-shadow: 0px 0px 20px 0px black;
 }

@@ -38,16 +38,19 @@
 
                     <!-- search area -->
                     <div class="boxshadow  p-4 rounded-3">
-                        <div class="input-group mb-3 w-md-50">
+                        <div class="input-group mb-3 w-md-50 d-flex">
                             <input id="search-filed" class="input-field w-50" type="text" placeholder="Search Phone">
                             <button onclick="loadData()" class="search">Search<i class="fa-solid fa-magnifying-glass ms-1"></i></button>
-                          </div>
+                        </div>
                           <div class="brands d-flex">
                             <p class="textOrangeRed fw-bold"><i class="fa-solid fa-mobile-screen-button me-1 text-orangeRed"></i>iphone</p>
                             <p class="textOrangeRed fw-bold ms-3"><i class="fa-solid fa-mobile-screen-button me-1 text-orangeRed"></i>Samsung</p>
                             <p class="textOrangeRed fw-bold ms-3"><i class="fa-solid fa-mobile-screen-button me-1 text-orangeRed"></i>oppo</p>
                         </div>
                     </div>  
+
+                    <p id="result-error" class="text-orangeRed fw-bolder error">Error: Not find anything</p>
+
                     
                     <!-- phone full details -->
                     <div id="phone-details" class="row row-cols-1 g-4 my-3">
@@ -56,6 +59,7 @@
 
                 </div>
                 <div class="col-12 col-md-8 rounded-3 p-3 d-flex scrollable-box scroll">
+                    <img id="loading" class="w-50 h-25 mx-auto mt-5" src="images/loading.gif" alt="">
                     <div id="search-results" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 my-3">
                        <!-- container for search results -->
                     </div>

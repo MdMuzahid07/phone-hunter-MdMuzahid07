@@ -34,7 +34,7 @@ const displayData = (phones) => {
                     <img src="${phone.image}" class="card-img-top" alt="phone image">
                     <div class="card-body">
                         <h5 class="card-title">Brand: ${phone.brand}</h5>
-                        <p class="card-text">Model: ${phone.phone_name}<i onclick="phoneDetailsById(${phone.slug})" class="fa-solid fa-angles-right ms-1 d-inline boxshadow p-1 rounded-3"></i></p>
+                        <p class="card-text">Model: ${phone.phone_name}<i onclick="phoneDetailsById('${phone.slug}')" class="fa-solid fa-angles-right ms-1 d-inline boxshadow p-1 rounded-3"></i></p>
                     </div>
                     
                 </div>
@@ -48,9 +48,43 @@ const displayData = (phones) => {
 
 // display phone full details
 
-// const phoneDetailsById = (id) => {
-//     const url = `https://openapi.programming-hero.com/api/phone/${id}`;
-//     fetch(url)
-//         .then(response => response.json())
-//         .then(data => console.log(data))
-// }
+const phoneDetailsById = (id) => {
+    const url = `https://openapi.programming-hero.com/api/phone/${id}`;
+    fetch(url)
+        .then(response => response.json())
+        .then(data => phoneFullDetails(data.data))
+}
+
+
+// display phone full details by click
+
+const phoneFullDetails = (phoneFeatures) => {
+
+    console.log(phoneFeatures)
+    const phoneDetails = document.getElementById('phone-details');
+
+    phoneDetails.textContent = " ";
+
+
+    const div = document.createElement('div');
+    div.innerHTML = `
+        <div class="col">
+            <div class="card p-3 rounded-3 border-0 h-100 w-100">
+                <img src="${phoneFeatures.image}" class="card-img-top" alt="phone image">
+                <div class="card-body">
+                    <h5 class="card-title">Brand: ${phoneFeatures.mainFeatures.brand}</h5>
+                    <h3>mainFeatures:</h3>
+                    <p class="card-text">Model: ${phoneFeatures.mainFeatures.chipSet}</p>
+                    <p class="card-text">Model: ${phoneFeatures.mainFeatures.displaySize}</p>
+                    <p class="card-text">Model: ${phoneFeatures.mainFeatures.memory}</p>
+                    <h3>sensors:</h3>
+                    <p class="card-text">Model: ${phoneFeatures.mainFeatures.sensors}</p>
+                   
+
+                </div>
+        
+            </div>
+        </div> 
+    `;
+    phoneDetails.appendChild(div);
+};

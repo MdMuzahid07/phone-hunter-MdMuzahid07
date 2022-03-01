@@ -1,0 +1,46 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Roboto+Mono:ital@1&family=Ubuntu&display=swap');
+
+
+* {
+    font-family: roboto;
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-thumb  {
+    background-color: rgb(165, 165, 165);
+}
+
+html::-webkit-scrollbar-track {
+    background-color: rgb(237, 237, 237);
+}
+
+.input-field {
+    background-color: red;
+    padding: 0.3rem 1rem;
+    border-radius:  2rem;
+    border: none;
+}
+
+.input-field::placeholder {
+    color: white;
+}
+
+.search {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    border-radius: 0rem 1rem 0rem 0rem;
+    border: none;
+}
+
+.bg-orangeRed {
+    background-color: rgb(255, 60, 0);
+}
+
+.boxshadow {
+    box-shadow: 0px 0px 5px 0px black;
+}

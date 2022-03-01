@@ -1,13 +1,14 @@
 const loadData = () => {
     // get input value
 
-    // loading
-    document.getElementById('loading').style.display = "block";
-
     const searchFiled = document.getElementById('search-filed');
     const searchValue = searchFiled.value.toLowerCase();
 
     searchFiled.value = " ";
+
+    
+    // loading
+    document.getElementById('loading').style.display = "block";
 
     
     // load data by API
